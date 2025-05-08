@@ -1,0 +1,14 @@
+node_modules
+dist
+.DS_Store
+server/public
+vite.config.ts.*
+*.tar.gz
+# Keep the database file in data directory
+# But ignore other database files
+data/old/
+data/backups/
+*.sqlite3
+*.db-journal
+# Keep orange_auth.db in repo for zero-configuration setup
+!data/orange_auth.db
