@@ -6,7 +6,8 @@ export function OrangeAuthProvider({
 }: {
   children?: React.ReactNode;
 }) {
-  const origin = typeof window !== "undefined" ? window.location.origin : "";
+
+  const domain = "orange-id-template.vercel.app";
   
   // Debug logging during initialization
   console.log("[mount.start]: Bedrock Passport");
@@ -14,7 +15,7 @@ export function OrangeAuthProvider({
   return (
     <BedrockPassportProvider
       baseUrl="https://api.bedrockpassport.com"
-      authCallbackUrl={`${origin}/auth/callback`}
+      authCallbackUrl={`${domain}/auth/callback`}
       tenantId="orange-ood92bfz7z"
       subscriptionKey="870c3f7db0ad4c9e9a5f90435d59edbd"
     >
